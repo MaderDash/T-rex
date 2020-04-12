@@ -1,0 +1,53 @@
+from tkinter import *
+
+test_dict = {}
+totals_dict = []
+entries = []
+stats_tracking_list =[
+    "Useful Life:", 
+    "Salvage Value:", 
+    "Cost:",
+    "Number of years of usefull Life:",
+    "Day:",
+    "Month:",
+    "type",
+]
+type_of_accounting_selected =[]
+bg_color = "SlateBlue"; bg_color2 = "SlateBlue1"; bg_color3 = "RoyalBlue1"
+
+
+
+
+class Window:  
+    def __init__(self,):
+        self.root = Tk()
+        self.title = self.root.title("hellow")
+        self.geomitry = self.root.geometry("530x310")
+        self.background = "SlateBlue"
+        self.paneOne = Frame(self.root, bg=self.background,)
+        self.paneOne_grid_x = self.root.grid_rowconfigure(index=0, weight=1,)
+        self.paneOne_grid_y = self.root.grid_columnconfigure(index=0, weight=1,)
+        self.paneOne_grid = self.root.grid()
+        self.paneTwo = Frame(self.paneOne, bg=self.background ,relief="raised", borderwidth=3,)
+        self.paneTwo_grid = self.root.grid()
+        #d = FrameOne()
+
+        self.root.mainloop()
+        
+
+class FrameOne(Window,):
+    def __init__(self,):
+        Window.__init__(self)
+        self.frame = Frame(self.root, bg = self.background,)
+        self.grid = self.root.grid()
+
+        #super(Window())
+        self.root.mainloop()
+
+        
+    
+    
+
+d = FrameOne() 
+
+#main_window = Window()
